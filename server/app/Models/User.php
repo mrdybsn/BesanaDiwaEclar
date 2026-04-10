@@ -14,15 +14,23 @@ class User extends Authenticatable
     /** @use HasFactory<UserFactory> */
     use HasFactory, Notifiable, HasApiTokens;
 
+    protected $table = 'tbl_users';
     /**
      * The attributes that are mass assignable.
      *
      * @var list<string>
      */
     protected $fillable = [
-        'name',
-        'email',
+        'first_name',
+        'middle_name',
+        'last_name',
+        'suffix_name',
+        'gender_id',
+        'birth_date',
+        'age',
+        'username',
         'password',
+        'is_deleted',
     ];
 
     /**
@@ -32,7 +40,6 @@ class User extends Authenticatable
      */
     protected $hidden = [
         'password',
-        'remember_token',
     ];
 
     /**
@@ -43,8 +50,12 @@ class User extends Authenticatable
     protected function casts(): array
     {
         return [
-            'email_verified_at' => 'datetime',
             'password' => 'hashed',
         ];
+    }
+
+    public function gender(): BelongsTo
+    {
+        return $this->belongsTo(Gender::class, 'gender_id', 'gender_id');
     }
 }
