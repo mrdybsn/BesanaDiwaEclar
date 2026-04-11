@@ -1,9 +1,9 @@
 import { useEffect, useState, type FC } from "react"
 import { Table, TableBody, TableCell, TableHeader, TableRow } from "../../../components/Table"
-import type { GenderColumns } from "../../../interfaces/GenderColumns"
 import GenderServices from "../../../services/GenderServices"
 import Spinner from "../../../components/Spinner/Spinner"
 import { Link } from "react-router-dom"
+import type { GenderColumns } from "../../../interfaces/GenderInterfaces"
 
 interface GenderListProps {
     refreshKey: boolean

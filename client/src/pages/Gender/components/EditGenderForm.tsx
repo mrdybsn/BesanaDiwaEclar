@@ -4,8 +4,8 @@ import SubmitButton from "../../../components/Button/SubmitButton"
 import FloatingLabelInput from "../../../components/Input/FloatingLabelInput"
 import GenderServices from "../../../services/GenderServices";
 import { useParams } from "react-router-dom";
-import type { GenderFieldErrors } from "../../../interfaces/GenderFieldErrors";
 import Spinner from "../../../components/Spinner/Spinner";
+import type { GenderFieldErrors } from "../../../interfaces/GenderInterfaces";
 
 interface EditGenderFormProps {
     onGenderUpdated: (message: string) => void

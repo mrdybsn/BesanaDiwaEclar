@@ -2,7 +2,7 @@ import { useState, type FC, type FormEvent } from "react";
 import SubmitButton from "../../../components/Button/SubmitButton";
 import FloatingLabelInput from "../../../components/Input/FloatingLabelInput"
 import GenderServices from "../../../services/GenderServices";
-import type { GenderFieldErrors } from "../../../interfaces/GenderFieldErrors";
+import type { GenderFieldErrors } from "../../../interfaces/GenderInterfaces";
 
 interface AddGenderFormProps {
   onGenderAdded: (message:string) => void

@@ -5,9 +5,9 @@ import FloatingLabelSelect from "../../../components/Select/FloatingLabelSelect"
 import CloseButton from "../../../components/Button/CloseButton"
 import SubmitButton from "../../../components/Button/SubmitButton"
 import GenderServices from "../../../services/GenderServices"
-import type { GenderColumns } from "../../../interfaces/GenderColumns"
-import type { UserFieldErrors } from "../../../interfaces/UserFieldErrors"
 import UserService from "../../../services/UserService"
+import type { UserFieldErrors } from "../../../interfaces/UserInterfaces"
+import type { GenderColumns } from "../../../interfaces/GenderInterfaces"
 
 interface AddUserFormModalProps {
     onUserAdded: (message: string) => void
